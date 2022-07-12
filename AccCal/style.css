@@ -1,0 +1,88 @@
+@media only screen and (max-width:600px) {
+    #calculator-1, #calculator-3, #calculator-4, #calculator-6, #calculator-7, #calculator-8, #calculator-9, #calculator-10, #calculator-11{
+        width: 80%;
+        padding: 20px;
+        left: 0%;
+        top:5%;
+        height: 50%;
+        left: 5%;
+        
+       
+        
+    } 
+    #calculator-2, #calculator-5 {
+        width: 80%;
+        padding: 20px;
+        left: 0%;
+        top:5%;
+        height: 60%;
+        left: 5%;
+    }
+}
+.all{
+    display: none;
+    position: absolute;   
+    top:5%;
+    border-radius: 5px;
+    height: 50%;
+    text-align: center;
+    font-size: 14px;
+    width: 40%;
+    padding: 20px;
+    left: 35%;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+h5{
+    font-size: 18px;
+}
+#closebtn {
+    border: none;
+    background-color: none;
+    font-size: 24px;
+    float: right;
+}
+body{
+    background: #16BFFD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CB3066, #16BFFD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
+}
+input[type='number'] {
+    padding:5px;
+    border: 1px solid #CB3066;
+}
+#calculate{
+    
+    padding: 14px 19px;
+    color: white;
+    text-align: center;
+    background-color: #CB3066;
+    border-bottom-width: 80%;
+    border: 2px solid white;
+    letter-spacing: 1px;
+    }
+
+.btn{
+display: flex;
+justify-content: center;
+padding: 14px 19px;
+color: white;
+text-align: center;
+margin:10px 0;
+background-color: #CB3066;
+font-size: 13px;
+border-bottom-width: 80%;
+border: 2px solid white;
+letter-spacing: 1px;
+}
+.btn:hover{
+    color: beige;
+    letter-spacing: 1px;
+    transition: ease-in;
+    padding: 15px 19px;
+}

@@ -1,0 +1,26 @@
+body{
+    background-color: azure;
+    
+}
+.pos{
+    
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+}
+#btn-increase, #btn-decrease, #btn-reset {
+    padding: 15px 25px;
+    background-color: white;
+    text-align: center;
+    margin: 20px;
+    
+    display:inline;
+    border: 1px solid purple;
+    color:purple;
+}
+h1{
+    color: purple;
+    display: block;
+    text-align: center;
+    margin-top: 10% ;
+}

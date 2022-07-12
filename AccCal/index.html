@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AccCal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class ="container">
+            <button class="btn" onclick="showCalculatorOne()">Worth Calculator</button>            
+            <button class="btn" onclick="showCalculatorTwo()">Current Assets</button>
+            <button class="btn" onclick="showCalculatorThree()">Net Fixed Assets</button>
+            <button class="btn" onclick="showCalculatorFour()">Total Assets</button>
+            <button class="btn" onclick="showCalculatorFive()">Current Liabilities</button>
+            <button class="btn" onclick="showCalculatorSix()">Shareholder's Equity</button>
+            <button class="btn" onclick="showCalculatorSeven()">Total Liabilities & Equity </button>
+            <button class="btn" onclick="showCalculatorEight()">Gross Margin</button> 
+            <button class="btn" onclick="showCalculatorNine()">Operating Expenses</button>
+            <button class="btn" onclick="showCalculatorTen()">Income From Operations</button>
+            <button class="btn" onclick="showCalculatorEleven()">Net Income</button>
+        </div>
+
+        
+        <div id="calculator-1" class="all" >
+           <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>Worth: The Accounting Equation</h4>
+            <label>Assets</label>
+            <input type="number" id="input-1"/>
+            <br/><br/>
+            <label>Liabilities</label>
+            <input type="number" id="input-2" />
+            <br/></br>
+            <button id="calculate" onclick="calculateWorth()">Calculate</button>
+            <h5>Result: $<span id="answer-1"></span></h5>
+        </div>
+
+
+
+        <div id="calculator-2" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>Current Assets: Current assets are the sum of assets that will convert into cash in less than 12 months</h4>
+            <label>Cash            </label>
+            <input type="number" id="input-3"/>
+            <br/><br/>
+            <label>Accounts Receivable</label>
+            <input type="number" id="input-4" />
+            <br/></br>
+            <label>Inventory</label>
+            <input type="number" id="input-5" />
+            <br/></br>
+            <label>Prepaid Expenses</label>
+            <input type="number" id="input-6" />
+            <br/></br>
+            <button id="calculate" onclick="calculateCurrentAssets()">Calculate</button>
+            <h5>Result: $<span id="answer-2"></span></h5>
+        </div>
+
+        <div id="calculator-3" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>Net Fixed Assets: Net fixed assets are the book value of fixed assets. </h4>
+            <label>Fixed Assets @ cost</label>
+            <input type="number" id="input-7"/>
+            <br/><br/>
+            <label>Accumulated Depreciation</label>
+            <input type="number" id="input-8" />
+            <br/></br>
+            <button id="calculate" onclick="calculateNetFixedAssets()">Calculate</button>
+            <h5>Result: $<span id="answer-3"></span></h5>
+        </div>
+
+        <div id="calculator-4" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>Total Assets: The sum of all assets </h4>
+            <label>Current Assets</label>
+            <input type="number" id="input-9"/>
+            <br/><br/>
+            <label>Other Assets</label>
+            <input type="number" id="input-10" />
+            <br/></br>
+            <label>Net Fixed Assets</label>
+            <input type="number" id="input-11" />
+            <br/></br>
+            <button id="calculate" onclick="calculateTotalAssets()">Calculate</button>
+            <h5>Result: $<span id="answer-4"></span></h5>
+        </div>
+
+        <div id="calculator-5" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>Current Liabilities: Bills due within 12 months of the Balance Sheet date.</h4>
+            <label>Accounts Payable</label>
+            <input type="number" id="input-12"/>
+            <br/><br/>
+            <label>Accrued Expenses</label>
+            <input type="number" id="input-13" />
+            <br/></br>
+            <label>Current Portion of Debt</label>
+            <input type="number" id="input-14" />
+            <br/></br>
+            <label>Income Taxes Payable</label>
+            <input type="number" id="input-15" />
+            <br/></br>
+
+            <button id="calculate" onclick="calculateCurrentLiabilities()">Calculate</button>
+            <h5>Result: $<span id="answer-5"></span></h5>
+        </div>
+
+        <div id="calculator-6" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>Shareholder's equity: is the value of the company to its owners. Also called net worth.</h4>
+            <label>Capital Stock</label>
+            <input type="number" id="input-16"/>
+            <br/><br/>
+            <label>Retained Earnings</label>
+            <input type="number" id="input-17" />
+            <br/></br>
+            <button id="calculate" onclick="calculateShareholderEquity()">Calculate</button>
+            <h5>Result: $<span id="answer-6"></span></h5>
+        </div>
+        <div id="calculator-7" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>Total Liabilities & Equity: This is the total obligation plus worth of the entity</h4>
+            <label>Current Liabilities </label>
+            <input type="number" id="input-18"/>
+            <br/><br/>
+            <label>Long-Term Debt</label>
+            <input type="number" id="input-19" />
+            <br/></br>
+            <label>Shareholders' Equity</label>
+            <input type="number" id="input-20" />
+            <br/></br>
+            <button id="calculate" onclick="calculateTotalLiablitiesAndEquity()">Calculate</button>
+            <h5>Result: $<span id="answer-7"></span></h5>
+        </div>
+
+        
+        <div id="calculator-8" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>Gross Margin: The left over amount after cost of goods sold are taken away from net sales</h4>
+            <label>Net Sales</label><br/>
+            <input type="number" id="input-21" value=''/>
+            <br/><br/>
+            <label>Cost of Goods Sold</label><br/>
+            <input type="number" id="input-22" />
+            <br/></br>
+            
+            <button id="calculate" onclick="calculateGrossMargin()">Calculate</button>
+            <h5>Result: $<span id="answer-8"></span></h5>
+        </div>
+
+        <div id="calculator-9" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4> Operating Expenses: The sum of expenses paid for developing and selling the product or service. </h4>
+            <label>Sales & Marketing</label>
+            <input type="number" id="input-23"/>
+            <br/><br/>
+            <label>Research & Development</label>
+            <input type="number" id="input-24" />
+            <br/></br>
+            <label>General & Administrative</label>
+            <input type="number" id="input-25" />
+            <br/></br>
+            <button id="calculate" onclick="calculateOperatingExpenses()">Calculate</button>
+            <h5>Result: $<span id="answer-9"></span></h5>
+        </div>
+
+        <div id="calculator-10" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4> Income From Operations: Net profit from the product or services sold. </h4>
+            <label>Gross Margin</label>
+            <input type="number" id="input-26"/>
+            <br/><br/>
+            <label>Operating Expenses</label>
+            <input type="number" id="input-27"/>
+            <br/><br/>
+            <button id="calculate" onclick="calculateIncomeFromOperations()">Calculate</button>
+            <h5>Result: $<span id="answer-10"></span></h5>
+        </div>
+
+        <div id="calculator-11" class="all">
+            <button id="closebtn" onclick="closeCal()">&times;</button>
+            <h4>  Net Income: Net income is all income minus total expenses and costs.  </h4>
+            <label>Income From Operations</label>
+            <input type="number" id="input-28"/>
+            <br/><br/>
+            <label> Interest Income</label>
+            <input type="number" id="input-29"/>
+            <br/><br/>
+            <label>Income Taxes</label>
+            <input type="number" id="input-30"/>
+            <br/><br/>
+            <button id="calculate" onclick="calculateNetIncome()">Calculate</button>
+            <h5>Result: $<span id="answer-11"></span></h5>
+        </div>
+
+
+
+        
+        
+        
+    </body>
+    <script src="calculator.js"></script>
+            <script src="main.js"></script>
+</html>
