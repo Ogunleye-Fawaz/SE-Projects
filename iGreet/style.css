@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+   
+}
+body{
+    background:#8f94fb;
+}
+.container-1{
+    background-color: white;
+    border-radius: 5px;
+    width:90%;
+    margin: 5% 7%;
+     
+    height: 400px;
+    padding:5px;
+    box-sizing: border-box;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction:column;
+}
+h2,p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    margin: 20px 0px 0px 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+    
+}
+
+input[type=text] {
+    width:60%;
+    text-align: center;
+    padding: 14px 16px;
+    background-color: gainsboro;
+    border:none;
+    border-radius: 5px;  
+}
+
+input:focus {
+    border: none;
+    outline: 2px #8f94fb;
+
+}
+label{
+    color:white;
+    font-family:monospace;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+button{
+    padding: 14px 16px;
+    background-color: #8f94fb;
+    border: 1px solid #8f94fb;
+    color: white;
+    font-family:Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.container-2{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    flex-direction: column;
+}
+.container-2 #time {
+    font-size: 45px;
+    font-family: poppins;
+}
+.container-2 #greeting {
+    font-size: 25px;
+    font-family: poppins;  
+    padding: 1px;
+}
+
+@media screen and (max-width: 300px) {
+    .container-1 {
+         height:450px;
+        }
+
+    }
+
+    @media screen and (max-width: 300px) {
+        .container-1 {
+             height:450px;
+            }
+        }
+    @media screen and (min-width: 301px) and (max-width: 500px) {
+
+ 
+        .container-2{
+            margin-top: 15%;
+            
+        }}
+
+        @media screen and (min-width: 701px)  {
+
+            .container-1{
+                width: 30%;
+            }
+            .container-2{
+                margin-top: 10%;
+                
+            }}
+
