@@ -1,5 +1,5 @@
 let i = 0;
-let text = "Hello there, I am fawaz! Travel through my portfolio";
+let text = "Hello there, I am fawaz! Travel through my portfolio.....";
 let speed = 50;
 
 function typeWriter() {
@@ -9,3 +9,16 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
 }
+
+let navClose = document.getElementById("close");
+navClose.onclick = () => {
+    document.getElementById('contact').style.display= 'none';
+    
+}
+
+let navOpen = document.getElementById('btn');
+navOpen.onclick = () => {
+    document.getElementById('contact').style.display= 'block';
+
+}
+
