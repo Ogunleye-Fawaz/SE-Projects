@@ -22,7 +22,7 @@ let hour = date.getHours(); //gets the hour in 24 hours
 let minutes = date.getMinutes(); //gets the minutes in 24 hours
 let AM;
 
-inputBtn.onclick = function() {
+inputBtn.onclick = () => {
     const firstName = inputFirstName.value; //gets the value of the first name
     const lastName = inputLastName.value; //gets the value of the second name
     let currentHour = date.getHours();
